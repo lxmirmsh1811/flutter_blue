@@ -40,13 +40,8 @@ android {
 
 protobuf {
         protoc {
-        if (project.hasProperty('protoc_platform')){
-            artifact = "com.google.protobuf:protoc:3.11.4:${protoc_platform}"
+            artifact = 'com.google.protobuf:protoc:3.17.3'
         }
-        else{
-            artifact = 'com.google.protobuf:protoc:3.14.0'
-        }
-    }
     generateProtoTasks {
         all().each { task ->
             task.builtins {
@@ -59,5 +54,5 @@ protobuf {
 }
 
 dependencies {
-    implementation 'com.google.protobuf:protobuf-javalite:3.11.4'
+    implementation 'com.google.protobuf:protobuf-javalite:3.17.3'
 }
